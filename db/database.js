@@ -8,9 +8,9 @@ class Database {
 
     validate () {
 
-        const { host, user, database } = this.options;
-        if (!host || !user || !database)
-        throw new Error('Database creation has failed.');
+        const { host, user, password, database } = this.options;
+        if (!host || !user || !password ||  !database)
+        throw new Error('Creation of database has failed.');
 
         return;
     }
@@ -18,16 +18,16 @@ class Database {
     connect () {
         this.validate();
 
-        const { host, user, database } = this.options;
+        const { host, user, password, database } = this.options;
 
         this.db = mysql.createConnection( 
             {
                 host: host,
                 user: user,
-                // password: password,
+                password: password,
                 database: database
             },
-            console.log('Connection established to employee database.')
+            console.log('Employee database connected.')
         );
     }
     disconnect () {
