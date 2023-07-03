@@ -3,9 +3,9 @@ const { MainQuestions, AddDepartmentQuestions, AddRoleQuestions, AddEmployeeQues
 const EmployeeDatabase = require('./db/employeeDatabase')
 
 const db = new EmployeeDatabase ({
-    host: 'localhost',
+    host: '127.0.0.1',
     user: 'root',
-    password:'',
+    password:'lionking1',
     database: 'employee_db'
 });
 
@@ -44,7 +44,7 @@ const employeeQuestions = async () => {
 
 const view_departments = () => {
 
-    // Get the departments from db
+    // Fetch departments
     db.getDepartments().then((results) => {
 
         console.table(results);
@@ -55,7 +55,7 @@ const view_departments = () => {
 
 const view_roles = () => {
 
-    // Get the Roles from db
+    // Fetch Roles
     db.getRoles().then((results) => {
 
         console.table(results);
@@ -66,7 +66,7 @@ const view_roles = () => {
 
 const view_employees = () => {
 
-    // Get the employees from db
+    // Fetch Emplyees
     db.getEmployees().then((results) => {
 
         console.table(results);
@@ -136,8 +136,7 @@ const add_employee = () => {
                 name: 'None'
             });
 
-            inquirer
-            .prompt(AddEmployeeQuestions)
+            inquirer.prompt(AddEmployeeQuestions)
             .then((response) => {
                 db.addEmployee(response).then((results) => {
                     console.log('\n', results, '\n');
@@ -170,8 +169,7 @@ const update_role = () => {
                 });
             });
 
-            inquirer
-            .prompt(UpdateEmployeeRoleQuestions)
+            inquirer.prompt(UpdateEmployeeRoleQuestions)
             .then((response) => {
                 db.updateEmployeeRole(response).then((results) => {
                     console.log('\n', results, '\n');
