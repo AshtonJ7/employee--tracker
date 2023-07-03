@@ -1,6 +1,6 @@
-# employee--tracker
+# employee-tracker
 
-Command-line application from scratch to manage a company's employee database
+This is a command-line application that allows a company to manage an employee database.
 
 # User Story
 
@@ -31,3 +31,40 @@ THEN I am prompted to enter the employee’s first name, last name, role, and ma
 WHEN I choose to update an employee role
 THEN I am prompted to select an employee to update and their new role and this information is updated in the database 
 ```
+
+## Tech
+
+- Javascript
+- Node JS
+- MySQL 
+- mysql2
+- inquirer: 8.2.4
+
+
+## Installation
+Clone repo to local machine to run it from your command line.
+
+Run NPM install in terminal to download dependencies.
+
+Set MySQL database first by
+
+*  Entering: mysql -u root -p in terminal
+*  Input mySQL password
+
+Proceed to Enter:
+
+* source db/schema.sql;
+* USE employee_db;
+* source db/seeds.sql;
+* QUIT
+
+Proceed to Run node index.js into the terminal to launch the application.
+
+## Screenshot
+
+![image](https://github.com/AshtonJ7/employee--tracker/assets/62944042/9509ae87-68a6-4d01-a4fb-fe8936d832c0)
+
+
+## Walkthrogh
+
+
