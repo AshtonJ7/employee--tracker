@@ -65,7 +65,7 @@ Proceed to Run node index.js into the terminal to launch the application.
 ![image](https://github.com/AshtonJ7/employee--tracker/assets/62944042/9509ae87-68a6-4d01-a4fb-fe8936d832c0)
 
 
-## Walkthrogh
+## Walkthrough Video
 
 [screen-recorder-tue-jul-04-2023-00-04-41.webm](https://github.com/AshtonJ7/employee--tracker/assets/62944042/4267e268-41a5-49c7-99ce-33ab29d94ac9)
 
